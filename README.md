@@ -8,7 +8,7 @@ A Mood Tracker egy egyszerű, webalapú hangulatnapló alkalmazás, amely lehet�
 - **Dátum és jegyzet:** Minden bejegyzéshez dátum és opcionális jegyzet tartozik.
 - **Bejegyzések listázása:** A felhasználó visszanézheti a korábbi bejegyzéseit.
 - **Bejegyzés szerkesztése, törlése:** A bejegyzések szerkeszthetők vagy törölhetők a listából.
-- **Statisztikák, grafikon:** Átlag, minimum, maximum hangulat, valamint oszlopdiagram a bejegyzésekről.
+- **Statisztikák, grafikon:** Átlag, minimum, maximum hangulat, valamint vonaldiagram (line graph) a bejegyzésekről.
 - **Modern, letisztult felület:** Reszponzív, felhasználóbarát design.
 - **Swagger UI:** Az API végpontok tesztelhetők a beépített Swagger felületen is.
 
@@ -18,7 +18,7 @@ A Mood Tracker egy egyszerű, webalapú hangulatnapló alkalmazás, amely lehet�
   - Adattárolás: JSON fájl (fájl alapú, nem szükséges adatbázis)
 - **Frontend:**
   - HTML5, CSS3 (modern, reszponzív design)
-  - Vanilla JavaScript (API hívások, interaktív slider, szerkesztés/törlés, grafikon)
+  - Vanilla JavaScript (API hívások, interaktív slider, szerkesztés/törlés, vonaldiagram)
 - **Fejlesztői környezet:**
   - Visual Studio Code
   - .NET 8 SDK
@@ -32,6 +32,18 @@ A Mood Tracker egy egyszerű, webalapú hangulatnapló alkalmazás, amely lehet�
    - Nyisd meg a böngészőben: [http://localhost:5241](http://localhost:5241)
 3. **Swagger UI (API tesztelés):**
    - [http://localhost:5241/swagger](http://localhost:5241/swagger)
+
+## Endpoints
+
+- GET     /moods              – Összes bejegyzés lekérése
+- GET     /moods/{date}       – Bejegyzés lekérése adott dátumhoz
+- POST    /moods              – Új bejegyzés létrehozása
+- PUT     /moods/{date}       – Bejegyzés szerkesztése adott dátumhoz
+- DELETE  /moods/{date}       – Bejegyzés törlése adott dátumhoz
+
+Példák:
+- http://localhost:5241/moods
+- http://localhost:5241/moods/2024-05-12
 
 ## Fájlstruktúra
 ```
@@ -52,7 +64,7 @@ MoodTrackerApi/
 - A felhasználó a webes felületen kiválasztja a dátumot, beállítja a hangulatát (1-5, emoji sliderrel), és opcionálisan jegyzetet ír.
 - A bejegyzés mentése után az adatok egy JSON fájlba kerülnek.
 - A főoldalon megjelennek a korábbi bejegyzések is, melyek szerkeszthetők vagy törölhetők.
-- A statisztika szekcióban látható az átlag, minimum, maximum hangulat, valamint egy oszlopdiagram a bejegyzésekről.
+- A statisztika szekcióban látható az átlag, minimum, maximum hangulat, valamint egy vonaldiagram a bejegyzésekről.
 - Az API minimal stílusú, nincsenek külön controllerek, minden a Program.cs-ben van.
 
 ---
