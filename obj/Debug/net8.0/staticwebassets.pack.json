@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/benceszilagyi/Dev/MoodTrackerApi/wwwroot/app.js",
+      "PackagePath": "staticwebassets/app.js"
+    },
+    {
+      "Id": "/Users/benceszilagyi/Dev/MoodTrackerApi/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/Users/benceszilagyi/Dev/MoodTrackerApi/wwwroot/style.css",
+      "PackagePath": "staticwebassets/style.css"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.MoodTrackerApi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.MoodTrackerApi.props",
+      "PackagePath": "build\\MoodTrackerApi.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.MoodTrackerApi.props",
+      "PackagePath": "buildMultiTargeting\\MoodTrackerApi.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.MoodTrackerApi.props",
+      "PackagePath": "buildTransitive\\MoodTrackerApi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

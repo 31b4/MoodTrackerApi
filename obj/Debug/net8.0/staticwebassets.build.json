@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "EH0LXBC9ulNa+3JhVbk9uPqWttWNjII1cnBnnwOvBak=",
+  "Source": "MoodTrackerApi",
+  "BasePath": "_content/MoodTrackerApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MoodTrackerApi/wwwroot",
+      "Source": "MoodTrackerApi",
+      "ContentRoot": "/Users/benceszilagyi/Dev/MoodTrackerApi/wwwroot/",
+      "BasePath": "_content/MoodTrackerApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/benceszilagyi/Dev/MoodTrackerApi/wwwroot/app.js",
+      "SourceId": "MoodTrackerApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/benceszilagyi/Dev/MoodTrackerApi/wwwroot/",
+      "BasePath": "_content/MoodTrackerApi",
+      "RelativePath": "app.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/app.js"
+    },
+    {
+      "Identity": "/Users/benceszilagyi/Dev/MoodTrackerApi/wwwroot/index.html",
+      "SourceId": "MoodTrackerApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/benceszilagyi/Dev/MoodTrackerApi/wwwroot/",
+      "BasePath": "_content/MoodTrackerApi",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.html"
+    },
+    {
+      "Identity": "/Users/benceszilagyi/Dev/MoodTrackerApi/wwwroot/style.css",
+      "SourceId": "MoodTrackerApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/benceszilagyi/Dev/MoodTrackerApi/wwwroot/",
+      "BasePath": "_content/MoodTrackerApi",
+      "RelativePath": "style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/style.css"
+    }
+  ]
+}
