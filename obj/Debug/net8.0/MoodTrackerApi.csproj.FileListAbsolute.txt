@@ -33,3 +33,4 @@
 /Users/benceszilagyi/Dev/MoodTrackerApi/obj/Debug/net8.0/ref/MoodTrackerApi.dll
 /Users/benceszilagyi/Dev/MoodTrackerApi/bin/Debug/net8.0/mood_entries.json
 /Users/benceszilagyi/Dev/MoodTrackerApi/bin/Debug/net8.0/MoodTrackerApi.staticwebassets.runtime.json
+/Users/benceszilagyi/Dev/MoodTrackerApi/obj/Debug/net8.0/MoodTrackerApi.sourcelink.json

@@ -3,6 +3,37 @@ const API_URL = "/moods";
 const form = document.getElementById('moodForm');
 const entriesDiv = document.getElementById('entries');
 const messageDiv = document.getElementById('message');
+const moodSlider = document.getElementById('value');
+const moodEmoji = document.querySelector('.mood-emoji');
+const moodLabels = document.querySelectorAll('.mood-labels span');
+
+// Emoji mapping
+const moodEmojis = ['😢', '😕', '😐', '🙂', '😊'];
+
+// Set today's date as default
+document.getElementById('date').valueAsDate = new Date();
+
+// Update emoji based on slider value
+function updateEmoji(value) {
+    moodEmoji.textContent = moodEmojis[value - 1];
+    moodEmoji.style.transform = `translateX(-50%) scale(1.2)`;
+    setTimeout(() => {
+        moodEmoji.style.transform = 'translateX(-50%) scale(1)';
+    }, 200);
+}
+
+// Slider event listeners
+moodSlider.addEventListener('input', (e) => {
+    updateEmoji(e.target.value);
+});
+
+// Click on emoji labels
+moodLabels.forEach((label, index) => {
+    label.addEventListener('click', () => {
+        moodSlider.value = index + 1;
+        updateEmoji(index + 1);
+    });
+});
 
 // Bejegyzések betöltése
 async function loadEntries() {
@@ -21,7 +52,10 @@ async function loadEntries() {
             entriesDiv.innerHTML += `
                 <div class="entry">
                     <div class="entry-date">${entry.date.split('T')[0]}</div>
-                    <div class="entry-value">Hangulat: <b>${entry.value}</b></div>
+                    <div class="entry-value">
+                        <span>${moodEmojis[entry.value - 1]}</span>
+                        Hangulat: <b>${entry.value}</b>
+                    </div>
                     <div class="entry-note">${entry.note ? entry.note : ''}</div>
                 </div>
             `;
@@ -58,6 +92,11 @@ form.addEventListener('submit', async (e) => {
             messageDiv.style.color = '#38a169';
             messageDiv.textContent = 'Sikeres mentés!';
             form.reset();
+            // Reset date to today
+            document.getElementById('date').valueAsDate = new Date();
+            // Reset slider to middle
+            moodSlider.value = 3;
+            updateEmoji(3);
             loadEntries();
         } else {
             const err = await res.text();
@@ -71,4 +110,7 @@ form.addEventListener('submit', async (e) => {
 });
 
 // Oldal betöltésekor bejegyzések betöltése
-window.addEventListener('DOMContentLoaded', loadEntries); 
+window.addEventListener('DOMContentLoaded', () => {
+    loadEntries();
+    updateEmoji(moodSlider.value);
+}); 

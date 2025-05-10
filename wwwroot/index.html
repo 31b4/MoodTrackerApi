@@ -13,8 +13,20 @@
             <label for="date">Dátum:</label>
             <input type="date" id="date" name="date" required>
 
-            <label for="value">Hangulat (1-5):</label>
-            <input type="number" id="value" name="value" min="1" max="5" required>
+            <div class="mood-slider-container">
+                <label for="value">Hangulat:</label>
+                <div class="mood-slider">
+                    <input type="range" id="value" name="value" min="1" max="5" value="3" required>
+                    <div class="mood-emoji">😊</div>
+                    <div class="mood-labels">
+                        <span>😢</span>
+                        <span>😕</span>
+                        <span>😐</span>
+                        <span>🙂</span>
+                        <span>😊</span>
+                    </div>
+                </div>
+            </div>
 
             <label for="note">Jegyzet:</label>
             <textarea id="note" name="note" rows="2"></textarea>
