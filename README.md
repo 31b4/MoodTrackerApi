@@ -7,6 +7,8 @@ A Mood Tracker egy egyszerű, webalapú hangulatnapló alkalmazás, amely lehet�
 - **Hangulat rögzítése:** A felhasználó egy csúszkán (slider) választhatja ki a napi hangulatát (1-5), emoji vizuális visszajelzéssel.
 - **Dátum és jegyzet:** Minden bejegyzéshez dátum és opcionális jegyzet tartozik.
 - **Bejegyzések listázása:** A felhasználó visszanézheti a korábbi bejegyzéseit.
+- **Bejegyzés szerkesztése, törlése:** A bejegyzések szerkeszthetők vagy törölhetők a listából.
+- **Statisztikák, grafikon:** Átlag, minimum, maximum hangulat, valamint oszlopdiagram a bejegyzésekről.
 - **Modern, letisztult felület:** Reszponzív, felhasználóbarát design.
 - **Swagger UI:** Az API végpontok tesztelhetők a beépített Swagger felületen is.
 
@@ -16,7 +18,7 @@ A Mood Tracker egy egyszerű, webalapú hangulatnapló alkalmazás, amely lehet�
   - Adattárolás: JSON fájl (fájl alapú, nem szükséges adatbázis)
 - **Frontend:**
   - HTML5, CSS3 (modern, reszponzív design)
-  - Vanilla JavaScript (API hívások, interaktív slider)
+  - Vanilla JavaScript (API hívások, interaktív slider, szerkesztés/törlés, grafikon)
 - **Fejlesztői környezet:**
   - Visual Studio Code (MacBookon is fut)
   - .NET 8 SDK
@@ -49,14 +51,10 @@ MoodTrackerApi/
 ## Működés röviden
 - A felhasználó a webes felületen kiválasztja a dátumot, beállítja a hangulatát (1-5, emoji sliderrel), és opcionálisan jegyzetet ír.
 - A bejegyzés mentése után az adatok egy JSON fájlba kerülnek.
-- A főoldalon megjelennek a korábbi bejegyzések is.
+- A főoldalon megjelennek a korábbi bejegyzések is, melyek szerkeszthetők vagy törölhetők.
+- A statisztika szekcióban látható az átlag, minimum, maximum hangulat, valamint egy oszlopdiagram a bejegyzésekről.
 - Az API minimal stílusú, nincsenek külön controllerek, minden a Program.cs-ben van.
-
-## További ötletek (nem kötelező)
-- Bejegyzés szerkesztése, törlése
-- Statisztikák, grafikonok
-- Felhasználói fiókok
 
 ---
 
-**Készítette:** [A saját neved] 
+**Készítette:** Szilágyi Bence

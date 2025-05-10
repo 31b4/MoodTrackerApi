@@ -103,6 +103,39 @@ app.MapPost("/moods", (MoodEntry entry) =>
     return Results.Created($"/moods/{entry.Date:yyyy-MM-dd}", entry);
 });
 
+// PUT: Hangulatbejegyzés szerkesztése adott dátumhoz
+app.MapPut("/moods/{date}", (DateTime date, MoodEntry updatedEntry) =>
+{
+    var entries = LoadMoodEntries();
+    var entry = entries.FirstOrDefault(e => e.Date.Date == date.Date);
+    if (entry == null)
+    {
+        return Results.NotFound($"Nincs bejegyzés a következő dátumhoz: {date:yyyy-MM-dd}");
+    }
+    if (updatedEntry.Value < 1 || updatedEntry.Value > 5)
+    {
+        return Results.BadRequest("A hangulat értékének 1 és 5 között kell lennie!");
+    }
+    entry.Value = updatedEntry.Value;
+    entry.Note = updatedEntry.Note;
+    SaveMoodEntries(entries);
+    return Results.Ok(entry);
+});
+
+// DELETE: Hangulatbejegyzés törlése adott dátumhoz
+app.MapDelete("/moods/{date}", (DateTime date) =>
+{
+    var entries = LoadMoodEntries();
+    var entry = entries.FirstOrDefault(e => e.Date.Date == date.Date);
+    if (entry == null)
+    {
+        return Results.NotFound($"Nincs bejegyzés a következő dátumhoz: {date:yyyy-MM-dd}");
+    }
+    entries.Remove(entry);
+    SaveMoodEntries(entries);
+    return Results.NoContent();
+});
+
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
