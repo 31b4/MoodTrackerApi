@@ -20,7 +20,7 @@ A Mood Tracker egy egyszerű, webalapú hangulatnapló alkalmazás, amely lehet�
   - HTML5, CSS3 (modern, reszponzív design)
   - Vanilla JavaScript (API hívások, interaktív slider, szerkesztés/törlés, grafikon)
 - **Fejlesztői környezet:**
-  - Visual Studio Code (MacBookon is fut)
+  - Visual Studio Code
   - .NET 8 SDK
 
 ## Futtatás
